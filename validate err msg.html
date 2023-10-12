@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">    
+    </head>
+    <style>
+        Body {
+            font-family: Calibri, Arial, Helvetica, sans-serif;
+            background-color: #6582c2;
+        }
+        button{
+            background-color: #4CAF50;
+            width: auto;
+            color: orange;
+            padding: 10px;
+            margin: 10px 10px;
+            border: none;
+            cursor: pointer;
+            position: relative;
+        }
+        form{
+            border: 3px solid #f1f1f1;
+        }
+        input[type=text],input[type=email] {
+            width: 50%;
+            margin: 8px 0;
+            padding: 12px 12px;
+            display: inline-block;
+            border: 2px solid green;
+            box-sizing: border-box;
+            position: relative;
+        }
+        input[type=radio] {
+            display: inline inline-block;
+        }
+        button:hover {
+            opacity: 0.7;
+        }
+        .break-point::before{
+            content: "hiddentext";
+            font-size: 0;
+            display: block;
+            line-height: 0;
+        }
+        .break-point::after {
+            content: "hiddentext";
+            font-size: 0;
+            display: block;
+            line-height: 0;
+        }
+        .container {
+            padding: 25px;
+            background-color: lightblue;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+    <body>
+        <form action="validate.php" method="post">
+            Name:<input type="text" name="name" required>
+            <br/><br/>
+            E-mail:<input type="email" name="email" required>
+            <br/><br/>
+            Website:<input type="text" name="website">
+            <br/><br/>
+            Comment:<textarea name="comment" rows="5" cols="40"></textarea>
+            <br/><br/>
+            Gender:
+            <input type="radio" name="gender" value="female">Female
+            <input type="radio" name="gender" value="male">Male
+            <br/><br/>
+            <button name="submit">Submit</button>
+            <button type="reset" name="reset">Cancel</button>
+        </form>
+    </body>
+</html>
